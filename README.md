@@ -6,7 +6,7 @@ The file format contains 2 parts. A header which contains information such as th
 ## Background
 ActiveMime is an undocumented Microsoft file format often seen used to encode Office Macros.
 
-Current IR scripts often seek to the zlib header within the data block or use a hard coded index of 0x32. This library and script hopes to help analysts better process ActiveMime files and detect malformed samples and other anomolies.
+Current IR scripts often seek to the zlib header within the data block or use a hard coded index of 0x32 (50). This library and script hopes to help analysts better process ActiveMime files and detect malformed samples and other anomolies.
 
 If you have additional details, want to collaborate or corrections about the format feel free to reach out!
 
@@ -26,7 +26,7 @@ If you have additional details, want to collaborate or corrections about the for
     38:xx    00000000                  |  4|8 |  00000000          With size (4)
                                        |      |  00000000 10000000 With Size (8)
     xx:xx    0{x}000000                |  4   |  Seems to indicate if the block includes unencoded vb strings at the end.
-                                       |      |  00000000 - Block contains some unencded VB Project Strings
+                                       |      |  00000000 - Block contains some unencoded VB Project Strings
                                        |      |  02000000 - Block does not contains unencoded VB Project Strings
                                        |      |  tail includes unencoded VB Project Data
     xx:xx    xxxxxxxx                  |  4   |  Uncompressed Size
