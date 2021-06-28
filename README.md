@@ -18,7 +18,7 @@ If you have additional details, want to collaborate or corrections about the for
     12:14    01f0                      |  2   |  Unknown -- always 01f0 -- Version?
     14:18    04000000                  |  4   |  FieldSize?
     18:22    ffffffff                  |  4   |  Always ffffffff
-    22:26    {x}0000{y}f0              |  2   |  x observed as {0,1,2,3,4,5,6,B,A}
+    22:26    {x}0000{y}f0              |  4   |  x observed as {0,1,2,3,4,5,6,B,A}
                                        |      |  y observed as {6,7,8} -- Note: Usually 7 other values could indicate a malformed document
     26:30    xxxxxxxx                  |  4   |  Length of zlib compressed data
     30:34    04000000                  |  4   |  FieldSize  -- Observed as 4 or 8..almost always 4
